@@ -1,0 +1,866 @@
+ 
+body{
+    height: 7500px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.team-parent{
+    position: relative;
+} 
+.team-header{
+width: 100%;
+height: 70px;
+background-color:rgb(206, 177, 133);;
+overflow: auto;
+position: fixed;
+/* opacity:0.7 ; */
+background-color: rgba(243, 156, 26, 0.3);
+top: 0px;
+z-index: 10;
+}
+.team-header li{
+    position: relative;
+}
+
+.team-header ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    opacity: 0;
+}
+.team-header ul li a:hover::before{
+    width: 100%;
+    opacity: 1;
+    transition: 1s;
+}
+.team-img{
+    width: 150px; 
+    height: 70px;
+    margin-left:150px ;
+    float: left;    
+}
+.team-ul{
+    list-style: none;
+    float: right;
+    margin-right: 50px; 
+}
+.team-ul li{
+    display: inline-block;
+    margin-left: 70px;
+}
+.team-ul li a {
+    text-decoration: none;
+    color:  rgb(219, 168, 96);
+    color: white;
+    font-size: 30px;
+}
+.team-ul li a:hover {
+    color: white;
+    color:  rgb(233, 154, 44);
+}
+/* background/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.team-background{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/pizza-pizza-filled-with-tomatoes-salami-olives.jpg);
+    position: relative;
+}
+.team-overlay ,.chef-overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+    position: absolute;   
+}
+.team-content , .footer-content ,.menu-content ,.menu-seccontent ,.iconschildd{
+    width: 60% ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.team-h2{
+    font-size: 50px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+.team-p1{
+    font-size: 30px;
+    color: aliceblue;
+}
+.team-btn{
+    padding: 15px 30px;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+}
+.btn1{
+    background-color: rgb(167, 121, 53);
+    color: aliceblue;
+}
+.team-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.home-hr{
+    width: 80px ;
+    height: 3px;
+    background-color: aliceblue;
+    margin-left: 70px;
+    
+}
+/* /////////////////////////////////////////////////////////SECOND SECTION////////////////////////////////////////////////////////////////////////// */
+ .meals-container , .chefs-container ,.newdishes-container{
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    text-align: center; 
+    /* background-color: rgb(228, 190, 135); */
+ }
+ .meals-h2 , .chefs-h2 ,.newdishes-h2 ,.menu-title ,.offer-title  ,.mealsplans-h2{
+    padding-top: 7%;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(194, 153, 93);
+    color: rgb(194, 153, 93);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .meals-hr , .chefs-hr  ,.newdishes-hr ,.menu-hr ,.offer-hr   ,.mealsplans-hr {
+    width: 100px ;
+    height: 5px;
+    background-color:rgb(194, 153, 93);
+    /* color: rgb(238, 181, 111); */
+    margin: auto;
+    margin-top: -40px;
+ }
+ .meals-parent , .chefs-parent  ,.newdishes-parent ,.mnenu-firstparent , .mealsplans-parent{
+  overflow: auto;
+  
+  
+ }
+ .meals-breakfast , .chefs-child ,.newdishes-child{
+    width: 30%;
+    height: 250px;
+    border: 1px solid rgb(194, 153, 93);
+    margin: 0 1%; /* Adjust space between divs */
+    float: left;
+    padding: 50px;
+    box-sizing: border-box; /* Include padding and border in width */
+    color: rgb(63, 2, 2); /* For text visibility */
+    text-align: center;
+    border-radius: 8px; /* Optional: for rounded corners */
+    position: relative;
+}
+.bb ,.secnew {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+i{
+    padding-top:-20px;
+    font-size: 30px;
+    color: rgb(238, 182, 114) ;
+}
+.meals-breakfast-h2{
+    font-size: 35px;
+    color:rgb(194, 153, 93) ;
+}
+.meals-breakfast-p{
+    font-size: 20px;
+    color:rgb(230, 196, 146)  
+}
+.meals-breakfast-a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(238, 182, 114);   
+}
+.meals-breakfast::after {
+     content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+    opacity: 0; /* Start as invisible */
+    z-index: -1; 
+}
+.meals-breakfast:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; /* Show overlay on hover */
+    transition: 0.5s
+}
+.meals-breakfast:hover .meals-breakfast-h2  {
+    color: white; /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2; /* Ensure text is above the ::after pseudo-element */
+    transition: 0.7s;
+}
+.meals-breakfast:hover .meals-breakfast-p{
+    color: rgb(207, 165, 113); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2; /* Ensure text is above the ::after pseudo-element */
+}
+.meals-breakfast:hover .meals-breakfast-a{
+    color: rgb(238, 162, 70); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2; /* Ensure text is above the ::after pseudo-element */
+}
+.meals-breakfast:hover i{
+    color: rgb(238, 182, 114); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2;  
+}
+/* ////////////////////////////////////////////////////////3 section ///////////////////////////////////////////////////////*/
+.menu-container{
+    width: 100%;
+    height: 1500px;
+    background-color: antiquewhite;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+.mnenu-firstparent ,.menu-secparent{
+    width: 80%;
+    height: 50vh;
+    /* background-color: rgb(131, 96, 50); */
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    overflow: auto;
+}
+.menu-firstparent-firstrow ,.menu-secparent-secrow{
+    background-size: cover;
+    height: 440px; 
+    width: 30%;
+    float: left;
+    width: 30%;
+    height: 90%;
+    border-radius:50% ;
+    position: relative;
+}
+.f{
+    background-image: url(../img/pizza2.PNG);
+}
+.ff{
+    margin: 0 5% ;
+    background-image: url(../img/best1.PNG);
+    width: 30%;
+    height: 90%;
+    border-radius:50% ;
+}
+.fff{
+    background-image: url(../img/best2.PNG);
+}
+.menu-content ,.menu-seccontent{
+    display: none;
+    z-index: 2;
+}
+.menu-firstparent-firstrow::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */  
+}
+.menu-firstparent-firstrow:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 1s;
+}
+.menu-firstparent-firstrow:hover .menu-content {
+    display: block;
+}
+.menu-firstparent-firstrow:hover .ii{
+    color: rgb(255, 154, 31); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2;  
+}
+.menu-firstparent-firstrow:hover .menu-content-h{
+    color: rgb(255, 154, 31); /* Change text color on hover */
+    font-size: 30px;
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2;  
+}
+.menu-firstparent-firstrow:hover .menu-content-p{
+    color: rgb(238, 182, 114); /* Change text color on hover */
+    font-size: 27px;
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2;  
+    transition: 2s;
+}
+.s{
+    background-image: url(../img/best3.PNG);
+}
+.ss{
+    margin: 0 5% ;
+    background-image: url(../img/best4444.PNG);
+    width: 30%;
+    height: 90%;
+    border-radius:50% ;
+}
+.sss{
+    background-image: url(../img/best55.PNG);
+}
+.menu-secparent-secrow::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */  
+}
+.menu-secparent-secrow:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 1s;
+}
+.menu-secparent-secrow:hover .menu-seccontent {
+    display: block;
+}
+.menu-secparent-secrow:hover .seci{
+    color: rgb(255, 154, 31); 
+    position: relative;  
+    z-index: 2;  
+}
+.menu-secparent-secrow:hover .menu-seccontent-h{
+    color: rgb(255, 154, 31);  
+    font-size: 30px;
+    position: relative;  
+    z-index: 2;  
+}
+.menu-secparent-secrow:hover .menu-seccontent-p{
+    color: rgb(238, 182, 114);  
+    font-size: 27px;
+    position: relative;  
+    z-index: 2;  
+    transition: 2s;
+}
+/*/////////////////////////////////////////////////////////section 4//////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.offer-container{
+  width: 100%;
+    height: 600px;
+    text-align: center;
+    position: relative;
+}
+.offer-firstparent ,.offer-secparent{
+    width: 80%;
+    height: 150px;
+    margin: auto;
+    overflow: auto;
+    margin-top: 70px;
+    position: relative;
+}
+.offer-firstrow ,.offer-secrow{
+    width: 30%;
+    height: 150px;
+    border: 1px solid rgb(194, 153, 93);
+    margin: 0 1%; /* Adjust space between divs */
+    float: left;
+    padding: 50px;
+    box-sizing: border-box; /* Include padding and border in width */
+    color: rgb(63, 2, 2); /* For text visibility */
+    border-radius: 8px; /* Optional: for rounded corners */
+    position: relative;
+    text-align: left;
+}
+
+.tt ,.vv{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/* ///////////////////////////// */
+
+.firstrow-content ,.secrow-content{ 
+    margin-top: -50px;   
+}
+.icon {
+    display: inline-block; /* Set the icon to inline-block */
+    font-size: 30px;
+    color: rgb(238, 182, 114);
+    margin-right: 10px; /* Add some space between the icon and the title */
+    margin-top: 20px;
+    margin-left: -30px;
+}
+.firstrow-title ,.secrow-title {
+    display: inline-block; /* Keep the title on the same line as the icon */
+    font-size: 30px;
+    color: rgb(194, 153, 93);
+    margin-top: 20px; /* Remove default margin for better alignment */
+    line-height: 1.2; /* Adjust line-height if needed */
+    margin-left: 10px;
+}
+.firstrow-p ,.secrow-p{
+    display: block; /* Ensure the paragraph starts on a new line */
+    font-size: 20px;
+    color: rgb(230, 196, 146);
+    margin-top: -20px; /* Adjust spacing above the paragraph */
+    margin-left: 25px;
+}
+.offer-a{
+    text-decoration: none;
+}
+
+.offer-firstrow::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */
+   z-index: -1; 
+}
+
+.offer-firstrow:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 0.5s
+}
+.offer-firstrow:hover .firstrow-title{
+    color: white; /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2; /* Ensure text is above the ::after pseudo-element */
+    transition: 0.7s;
+}
+.offer-secrow::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */
+   z-index: -1; 
+}
+.offer-secrow:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 0.5s
+}
+.offer-secrow:hover .secrow-title{
+    color: white; /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    z-index: 2; /* Ensure text is above the ::after pseudo-element */
+    transition: 0.7s;
+}
+/* //////////////////////////sec5///////////////////////////////////////////// */
+.why-choose-us-section{
+    width: 100%;
+    height: 600px;
+    /* background-color: rgb(124, 83, 28); */
+    position: relative;
+    margin-top: 20px;
+}
+.choose-parent{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    height: 500px;
+}
+.text-content{
+    width: 40%;
+    height: 400px;
+    float: left;
+    margin-right: 200px;
+}
+.image-content {
+    width: 40%;
+    height: 400px;
+    float: left;
+    /* background-color: aqua; */
+}
+.choose-list{
+    text-align: center;
+    /* background-color: aqua; */
+    margin-top: 5px;
+}
+
+.ch1 ,.ch2,.ch3{
+    color: rgb(235, 200, 157);
+    font-size: 10px;
+}
+.ch1{
+    color: rgb(204, 146, 71);
+}
+ .ch2{
+    margin-right: 4px;
+    margin-left: 4px;
+    font-size: 10px;
+} 
+ .ch3:hover{
+    color: rgb(204, 146, 71);
+    font-size: larger;
+}
+.ch2:hover{
+    color: rgb(204, 146, 71);
+    font-size: larger;
+}
+.ch1:hover{
+    
+    font-size: larger;
+}
+
+.restaurant-features{
+    list-style: none;
+}
+.choose-h {
+    font-size: 45px;
+    color: rgb(238, 181, 111);
+    color: rgb(221, 159, 83);
+}
+.choose-hr{
+    width: 80px ;
+    height: 5px;
+    background-color: rgb(221, 159, 83); 
+    margin-top: -30px;
+}
+.choose-p{
+    font-size: 25px;
+    color: rgb(221, 159, 83);
+    color: rgb(134, 95, 46);;
+}
+ .restaurant-features{
+    margin-left: -40px;
+    font-size: 22px;
+    line-height: 30px;
+      color: rgb(134, 95, 46);;
+ }
+ .ichoose{
+    font-size: 15px;
+ }
+ /* /////////////////////////////////////////sec6///////////////////////////////////////// */
+ .icons-container{
+    background-image: url(../img/pair-mixed-piiza-table.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+ }
+ .icons-overllay{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(0, 0, 0,0.7);
+   position: absolute;    
+ }
+ .icons-parent{
+    width: 60%;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: auto;
+    margin-top: 100px;
+ }
+ .icons-child{
+    width: 20%;
+    height: 500px;
+    float: left;
+    text-align: center;
+    position: relative;
+ }
+ .c2 , .c3{
+    margin-left: 5%;
+    margin-right:5%;
+ }
+ .iconschildd{
+    font-size: 20px;
+ }
+ .icons-title , .icons-p{
+    color: aliceblue;
+ }
+ /* sec 77777777777777777777777777777777777777 */
+ .mealsplans-container{
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+ }
+ 
+ .meals-LunchSpecial {
+    width: 30%;
+    height: 500px;
+    border: 1px solid rgb(194, 153, 93);
+    margin: 0 1%; /* Adjust space between divs */
+    float: left;
+    padding: 50px;
+    box-sizing: border-box; /* Include padding and border in width */
+    color: rgb(63, 2, 2); /* For text visibility */
+    text-align: center;
+    border-radius: 8px; /* Optional: for rounded corners */
+    position: relative;
+}
+.c1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto; 
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid rgb(194, 153, 93);
+}
+.meals-plans-h2{
+    font-size: 35px;
+    color:rgb(194, 153, 93) ;
+    margin-top: 0;
+}
+.mealsplans-p{
+    font-size: 40px;
+    color: rgb(216, 158, 87);
+}
+.mealsplans-p2{
+    font-size: 20px;
+    color:  rgb(216, 158, 87);
+    opacity: 0.9;
+}
+.mealsplans-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(194, 153, 93);
+    color: aliceblue;
+    margin-top: 20px;
+    border-radius: 4px; 
+}
+.meals-LunchSpecial::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */
+}
+.meals-LunchSpecial:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /* Show overlay on hover */
+    transition: 0.5s
+}
+.meals-LunchSpecial:hover .meals-plans-h2  {
+    color: rgb(255, 186, 37); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    transition: 0.7s;
+}
+.meals-LunchSpecial:hover .mealsplans-p  {
+    color: rgb(245, 172, 36); /* Change text color on hover */
+    position: relative; /* Make sure the text is above the overlay */
+    transition: 0.7s;
+}
+/* ///////////////////////sec8 */
+.profile-container{
+    background-image: url(../img/pair-mixed-piiza-table.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    margin-top: 100px;
+ }
+ .profile-overllay{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(0, 0, 0,0.7);
+   position: absolute;  
+ }
+ .profile-parent{
+ width: 80%;
+ position: relative;
+ margin: auto;
+ overflow: auto;
+ height: 300px;
+}
+.profile-child{
+        width: 40%;
+        height: 300px;
+        float: left;
+}
+.secchild{
+    margin-left: 300px;
+}
+.profile-img{
+    background-image: url(../img/medium-shot-man-working-as-real-estate-agent.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 90px;
+    float: left;
+}
+.secimg{
+    background-image: url(../img/international-day-education-celebration.jpg);
+}
+.profile-title , .profile-p{
+    display: inline-block;
+    float: left;
+    margin-top: 120px;
+    margin-left: 20px;
+    color:  rgb(241, 234, 224);
+}
+.profile-p{
+    margin-top: 150px;
+    margin-left: -186px;
+    color:  rgb(245, 167, 78); 
+}
+.secp{
+    margin-left:-107px;
+}
+.profile-des{
+    margin-top: 200px;
+    color: aliceblue;
+}
+/* /////////////////////////sec8//////////////////////////////// */
+.chef{
+    height: 400px;
+    background-color: rgb(247, 227, 203);
+    border: none;
+}
+.chef-img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: -40px;
+}
+.chef-overlay{
+    visibility: hidden;
+
+}
+.chef:hover .chef-overlay{
+    visibility: visible;
+}
+.chef-overlay a{
+    display: block;
+    margin-left: auto;
+    width: 40px;
+    height: 40px; 
+    background-color: rgb(201, 146, 84);
+}
+.chef-overlay a i{
+    color: aliceblue;
+    line-height: 40px;
+
+}
+.chef-content{
+    color: rgb(214, 157, 87);
+    color: rgb(110, 61, 4);
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 5px;
+
+}
+.chef:hover .chef-content ,.newdishes-title ,.newdishes-p{
+    color: rgb(175, 127, 87);
+    
+}
+.chef::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */
+   
+}
+.chef:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 1s
+}
+/* /////////////////////////se10////////////////////////// */
+.newdishes-child{
+    height: 560px; 
+    text-align: left;
+    border: none;
+    background-color: rgb(247, 227, 203);
+}
+
+.newdishes-container{
+    height: 600px;
+}
+.newdishes-icons,.newdishes-icons i{
+    margin-top: 10px;
+    font-size: 15px;
+     color: rgb(175, 127, 87);;
+     
+}
+.newdishes-icons i{
+    color: rgb(107, 58, 3);
+    
+}
+.newdishes-a{
+    text-decoration: none;
+    color: rgb(104, 69, 30);
+}
+.newdishes-child::after {
+    content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0;
+   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color with opacity */
+   opacity: 0; /* Start as invisible */
+   
+}
+.newdishes-child:hover::after {
+   width: 100%;
+   height: 100%;
+   opacity: 0.7; /* Show overlay on hover */
+   transition: 1s
+}
+.NEWIC ,.NEWICC{
+    margin-left: 10px;
+}
+.final:hover{
+    color: rgb(238, 204, 162);
+}
+   /* /////////////////////////FINAL//////////////////////// */
+
+.footer{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(194, 153, 93);
+    bottom: 0;
+    position: relative;
+}
+.footicon ,.foot-p{
+    color: rgb(255, 251, 247);
+    font-size: 50px;
+    margin-top: 10px;
+}
+.foot-p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px
+}
+
+
+
+ 
+
+
+ 
