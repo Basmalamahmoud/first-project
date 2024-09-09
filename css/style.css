@@ -794,8 +794,8 @@ i{
 /* /////////////////////////se10////////////////////////// */
 .newdishes-child{
     height: 560px; 
-    text-align: center;
     border: none;
+    text-align: center;
     background-color: rgb(247, 227, 203);
 }
 
