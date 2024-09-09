@@ -796,9 +796,11 @@ i{
     height: 560px; 
     text-align: center;
     border: none;
-    background-color: rgb(134, 89, 33);
+    background-color: rgb(247, 227, 203);
 }
-
+.secnew{
+    
+}
 .newdishes-container{
     height: 600px;
 }
